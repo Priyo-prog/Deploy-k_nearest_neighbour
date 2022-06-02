@@ -1,0 +1,37 @@
+# Package Overview
+package_name: classification_model
+
+# Data Files
+training_data_file: Social_Network_Ads.csv
+test_data_file: test.csv
+
+# Variables
+# The variable we are attempting to predict (sale price)
+target: Purchased
+
+pipeline_name: classification_model
+save_model_file: k_nearest_neighbour_model
+
+# Will cause syntax errors since they begin with numbers
+variables_to_rename:
+  1stFlrSF: FirstFlrSF
+  2ndFlrSF: SecondFlrSF
+  3SsnPorch: ThreeSsnPortch
+
+
+# PSINHA
+features:
+  - Age
+  - EstimatedSalary
+ 
+
+# set train/test split
+test_size: 0.2
+
+# to set the random seed
+random_state: 0
+
+
+
+
+
